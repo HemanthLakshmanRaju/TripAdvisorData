@@ -1,0 +1,401 @@
+---
+title: "Trip Advisor"
+author: "Hemanth Lakshman Raju"
+date: "December 9, 2017"
+output: html_document
+---
+
+
+```{r}
+library(rvest)
+library(dplyr)
+library(tidyverse)
+library(stringr)
+library(tibble)
+library(RSQLite)
+library(rvest)
+library(RColorBrewer)
+library(stringr)
+library(tidytext)
+library(sentimentr)
+library(wordcloud)
+library(RgoogleMaps)
+library(ggmap)
+library(ggplot2)
+
+```
+
+```{r}
+setwd("C:/Users/Hemanth Lakshman/Documents/Trip Advisor Project")
+restaurant<-read.csv("Restaurants.csv",header=T, na.strings=c("","NA"))
+hotel<-read.csv("Hotels.csv")
+flights<-read.csv("Flights.csv")
+Points_of_interest<-read.csv("Points_of_interest.csv")
+```
+
+
+```{r}
+print(restaurant)
+```
+
+```{r}
+restaurant$Review_Count<-gsub("[A-z]","",restaurant$Review_Count)
+print(restaurant)
+```
+
+```{r}
+names(restaurant) <- c("Restaurant_Name","Restaurant_Web_Link","Review_Count","Price.Range","Cuisines_offered_1","Cuisines_offered_2","Review_1","Review_1_date","Review_2","Review_2_date","Category","Cuisines_offered_3","Cuisines_offered_4","Cuisines_offered_5") 
+restaurant <- unite(restaurant,"Cuisine",c(Cuisines_offered_1,Cuisines_offered_2,Cuisines_offered_3,Cuisines_offered_4,Cuisines_offered_5),sep=",",remove=TRUE)
+restaurant$Cuisine <- gsub("(?:NA\\,)|NA","",restaurant$Cuisine)
+restaurant$Cuisine <- gsub("\\,$","",restaurant$Cuisine)
+print(restaurant)
+```
+
+
+```{r}
+restaurant$Restaurant_Web_Link <- as.character(restaurant$Restaurant_Web_Link)
+class(restaurant$Restaurant_Web_Link)
+restaurant$Restaurant_address <- rep(NA,nrow(restaurant))
+for(i in 1:nrow(restaurant)){
+  htm <- read_html(restaurant$Restaurant_Web_Link[[i]])
+  radd1 <- htm %>% html_node(css="span.street-address") %>% html_text()
+  radd2 <- htm %>% html_node(css="span.extended-address") %>% html_text()
+  radd3 <- htm %>% html_node(css="span.locality") %>% html_text()
+  radd4 <- htm %>% html_node(css="span.country-name") %>% html_text()
+  restaurant$Restaurant_address[[i]] <- paste(radd1,radd2,radd3,radd4,collapse=',')
+}
+
+print(restaurant)
+```
+
+
+
+```{r}
+
+restaurant$Restaurant_ID<-restaurant$Restaurant_Web_Link
+restaurant$Restaurant_ID<-gsub("https://www.tripadvisor.com/Restaurant_Review-g187147-","",restaurant$Restaurant_ID)
+restaurant$Restaurant_ID<-gsub("^[A-z]$","",restaurant$Restaurant_ID)
+restaurant$Restaurant_ID<-gsub("[[:punct:]]","",restaurant$Restaurant_ID)
+restaurant$Restaurant_ID<-gsub("Reviews","",restaurant$Restaurant_ID)
+restaurant$Restaurant_ID<-gsub("[A-z]+$","",restaurant$Restaurant_ID)
+restaurant$Restaurant_ID<-gsub("d","",restaurant$Restaurant_ID)
+
+restaurant$Restaurant_ID<-gsub("[A-z]","",restaurant$Restaurant_ID)
+restaurant$Restaurant_ID <- restaurant$Restaurant_ID%>%
+  as.numeric()
+print(restaurant)
+```
+
+
+
+
+```{r}
+# to remove NA from the Restaurant_address
+restaurant$Restaurant_address <- gsub("(?:NA\\,)|NA","",restaurant$Restaurant_address)
+restaurant$Restaurant_address <- gsub("\\,$","",restaurant$Restaurant_address)
+print(restaurant)
+```
+
+
+
+
+```{r}
+hotel$Hotel_Web_Link <- as.character(hotel$Hotel_Web_Link)
+class(hotel$Hotel_Web_Link)
+hotel$Hotel_address <- rep(NA,nrow(hotel))
+for(i in 1:nrow(hotel)){
+  htm <- read_html(hotel$Hotel_Web_Link[[i]])
+  add1 <- htm %>% html_node(css="span.street-address") %>% html_text()
+  add2 <- htm %>% html_node(css="span.extended-address") %>% html_text()
+  add3 <- htm %>% html_node(css="span.locality") %>% html_text()
+  add4 <- htm %>% html_node(css="span.country-name") %>% html_text()
+  hotel$Hotel_address[[i]] <- paste(add1,add2,add3,add4,collapse=',')
+}
+
+print(hotel)
+
+```
+
+```{r}
+hotel$Review_Count<-gsub("[A-z]","",hotel$Review_Count)
+hotel$Distance<-gsub("[A-z]","",hotel$Distance)
+hotel$Price<-gsub("[$]","",hotel$Price)
+
+hotel$hotel_id <- hotel$Hotel_Web_Link
+hotel$hotel_id <- gsub("https://www.tripadvisor.com/Hotel_Review-g187147-","",hotel$hotel_id)
+hotel$hotel_id<-gsub("([0-9]+).*$","\\1",hotel$hotel_id)
+hotel$hotel_id<-gsub("d","",hotel$hotel_id)
+
+hotel$hotel_id<-hotel$hotel_id%>%
+  as.numeric()
+
+print(hotel)
+```
+
+
+```{r}
+# to remove NA from the Hotel_address
+hotel$Hotel_address <- gsub("(?:NA\\,)|NA","",hotel$Hotel_address)
+hotel$Hotel_address <- gsub("\\,$","",hotel$Hotel_address)
+print(hotel)
+```
+
+```{r}
+Points_of_interest$Web_link <- as.character(Points_of_interest$Web_link)
+class(Points_of_interest$Web_link)
+Points_of_interest$Poi_address <- rep(NA,nrow(Points_of_interest))
+for(i in 1:nrow(Points_of_interest)){
+  htm <- read_html(Points_of_interest$Web_link[[i]])
+  padd1 <- htm %>% html_node(css="span.street-address") %>% html_text()
+  padd2 <- htm %>% html_node(css="span.extended-address") %>% html_text()
+  padd3 <- htm %>% html_node(css="span.locality") %>% html_text()
+  padd4 <- htm %>% html_node(css="span.country-name") %>% html_text()
+  Points_of_interest$Poi_address[[i]] <- paste(padd1,padd2,padd3,padd4,collapse=',')
+}
+print(Points_of_interest)
+```
+
+
+
+```{r}
+
+Points_of_interest$POI_id <- Points_of_interest$Web_link
+Points_of_interest$POI_id <- gsub("https://www.tripadvisor.com/Attraction_Review-g187147-","",Points_of_interest$POI_id)
+Points_of_interest$POI_id <- gsub("^[A-z]$","",Points_of_interest$POI_id)
+Points_of_interest$POI_id<-gsub("[[:punct:]]","",Points_of_interest$POI_id)
+Points_of_interest$POI_id<-gsub("Reviews","",Points_of_interest$POI_id)
+Points_of_interest$POI_id<-gsub("[A-z]+$","",Points_of_interest$POI_id)
+Points_of_interest$POI_id<-gsub("[A-z]","",Points_of_interest$POI_id)
+Points_of_interest$POI_id<-gsub("d","",Points_of_interest$POI_id)
+
+Points_of_interest$POI_id<-Points_of_interest$POI_id%>%
+  as.numeric()
+
+Points_of_interest$No_of_reviews<-gsub("[A-z]","",Points_of_interest$No_of_reviews)
+Points_of_interest$No_of_bookingoptions <- gsub("[A-z]","",Points_of_interest$No_of_bookingoptions)
+print(Points_of_interest)
+```
+
+
+
+```{r}
+Points_of_interest$Ranking <- gsub("[A-z]","",Points_of_interest$Ranking)
+Points_of_interest$Ranking <- gsub("[&]","",Points_of_interest$Ranking)
+Points_of_interest$Ranking <- gsub("\\s\\d\\d\\d","",Points_of_interest$Ranking)
+Points_of_interest$Ranking<-gsub("[#]","",Points_of_interest$Ranking)
+print(Points_of_interest)
+```
+
+
+```{r}
+# to remove NA from the address
+Points_of_interest$Poi_address <- gsub("(?:NA\\,)|NA","",Points_of_interest$Poi_address)
+Points_of_interest$Poi_address <- gsub("\\,$","",Points_of_interest$Poi_address)
+print(Points_of_interest)
+```
+
+
+
+```{r}
+db<- dbConnect(SQLite(), dbname = 'TripAdvisorDB')
+
+```
+
+
+```{r}
+
+str(restaurant)
+dbSendQuery(conn = db,  "CREATE TABLE RestaurantTable (
+            Restaurant_Name TEXT,
+            Restaurant_Web_Link TEXT,
+            Review_Count TEXT,
+            `Price.Range` TEXT,
+            Cuisine TEXT,
+            Review_1 TEXT,
+            Review_1_date TEXT,
+			      Review_2 TEXT,
+            Review_2_date TEXT,
+            Category TEXT,
+            Restaurant_address TEXT,
+            Restaurant_ID numeric,
+            PRIMARY KEY(Restaurant_ID)
+            )
+            WITHOUT ROWID")
+dbWriteTable(conn = db, name = "restaurant", value = restaurant, row.names=FALSE, append = TRUE)
+
+
+```
+
+
+```{r}
+str(hotel)
+dbSendQuery(conn = db,  "CREATE TABLE HotelTable (
+            Hotel_Name TEXT,
+            Hotel_Web_Link text,
+            Cheapest_Provider TEXT,
+            Price num,
+            Review_Count text,
+            Distance num,
+            Amenities_1 TEXT,
+            Amenities_2 TEXT,
+            Hotel_address TEXT,
+            hotel_id num,
+            PRIMARY KEY(hotel_id)
+            )
+            WITHOUT ROWID")
+
+dbWriteTable(conn = db, name = "hotel", value = hotel, row.names=FALSE, append = TRUE)
+```
+
+
+
+```{r}
+str(Points_of_interest)
+dbSendQuery(conn = db,  "CREATE TABLE POI_Table (
+            Name text,
+            Web_link text,
+            No_of_reviews num,
+            Ranking num,
+            No_of_bookingoptions num,
+            POI_address TEXT,
+            POI_id num,
+            PRIMARY KEY(POI_id)
+            )
+            WITHOUT ROWID")
+dbWriteTable(conn = db, name = "Points_of_interest", value = Points_of_interest, row.names=FALSE, append = TRUE)
+```
+
+
+
+```{r}
+dbGetQuery(conn=db,"select * from restaurant")
+```
+
+```{r}
+dbSendQuery(conn=db, "Drop table RestaurantTable")
+```
+
+
+
+```{r}
+dbSendQuery(conn=db, "Drop table HotelTable")
+```
+
+
+
+```{r}
+dbSendQuery(conn=db, "Drop table POI_Table")
+```
+
+
+
+
+```{r}
+#WordCloud
+library("tm")
+library("SnowballC")
+library("wordcloud")
+library("RColorBrewer")
+text <- restaurant$Review_1
+docs <- Corpus(VectorSource(text))
+
+
+toSpace <- content_transformer(function (x , pattern ) gsub(pattern, " ", x))
+docs <- tm_map(docs, toSpace, "/")
+docs <- tm_map(docs, toSpace, "@")
+docs <- tm_map(docs, toSpace, "\\|")
+
+
+dtm <- TermDocumentMatrix(docs)
+m <- as.matrix(dtm)
+v <- sort(rowSums(m),decreasing=TRUE)
+d <- data.frame(word = names(v),freq=v)
+head(d, 10)
+
+
+set.seed(1234)
+wordcloud(words = d$word, freq = d$freq, min.freq = 1,
+          max.words=200, random.order=FALSE, rot.per=0.35, 
+          colors=brewer.pal(8, "Dark2"))
+```
+
+
+
+
+```{r}
+# GEOCODE
+geo.paris_locations <- geocode(as.character(hotel$Hotel_Name))#gets all lat and long
+# COMBINE DATA
+hotel.df <- head(cbind(hotel,geo.paris_locations ), n=20)
+
+
+# USE WITH GGPLOT  pointing each n every hotel
+get_map("Paris", zoom = 14) %>% ggmap() +
+  geom_point(data = hotel.df, aes(x = lon, y = lat), color = "red", size = 3)
+```
+
+
+
+```{r}
+# geocode
+geo.hotel_locations <- geocode(as.character(hotel$Hotel_Name))#gets all lat and long of hotels
+geo.restaurant_locations <- geocode(as.character(restaurant$Restaurant_Name))#gets all lat and long of restaurants
+geo.poi_locations <- geocode(as.character(Points_of_interest$Name))#gets all lat and long of POI
+
+```
+
+
+```{r}
+# store location coordinates
+hotel.df <- cbind(hotel,geo.hotel_locations)
+restaurant.df <- cbind(restaurant,geo.restaurant_locations )
+poi.df <- cbind(Points_of_interest,geo.poi_locations )
+
+
+# Plotting on the map
+get_map("Paris", zoom = 16, maptype = "terrain") %>% ggmap() +
+  geom_point(data = hotel.df, aes(x = lon, y = lat), color = "red", size = 3)+
+  geom_point(data = restaurant.df, aes(x = lon, y = lat), color = "green", size = 3)+
+  geom_point(data = poi.df, aes(x = lon, y = lat), color = "purple", size = 3)
+```
+
+
+
+```{r}
+dbRemoveTable(db, "restaurant")
+```
+
+
+
+```{r}
+dbRemoveTable(db, "hotel")
+```
+
+
+```{r}
+dbRemoveTable(db, "Points_of_interest")
+```
+
+
+```{r}
+
+dbWriteTable(conn = db, name = "restaurant", value = restaurant, row.names=FALSE, append = TRUE)
+```
+
+
+
+```{r}
+hotel$Price = hotel$Price%>% as.integer()
+pricedata <- hotel[order(hotel$Price),] 
+bb<-head(pricedata)
+ggplot(bb,aes(x=Distance,y=Price))+geom_bar(stat="identity",aes(fill=Hotel_Name))
+```
+
+
+```{r}
+hotel$Review_Count = hotel$Review_Count%>% as.numeric()
+rwdata <- hotel[order(hotel$Review_Count, decreasing=TRUE),] 
+print(rwdata)
+```
+
+

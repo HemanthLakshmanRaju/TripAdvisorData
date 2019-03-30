@@ -1,0 +1,160 @@
+Airline_Name,Stops,departure,arrival,arrival_time,Flight_duration,No_of_stops,return_departure,return_arrival,return_duration,flight_Score,Cheapest_Price,Cheapest_Website
+,,,,,,,,,,,,
+WOW air,1 stop,BOS 7:00 PM,CDG,11:30 AM,10h 30m,1 stop,CDG 12:35 PM,BOS 5:30 PM,10h 55m,FlyScore: 5.9,$400 ,Orbitz
+WOW air,1 stop,BOS 7:00 PM,CDG,5:25 PM,16h 25m,1 stop,CDG 12:35 PM,BOS 5:30 PM,10h 55m,FlyScore: 5.7,$400 ,CheapTickets
+,2 stops,,,11:30 AM,16h 30m,2 stops,,,4h 55m,,,
+WOW air,1 stop,BOS 7:00 PM,CDG,11:30 AM,10h 30m,1 stop,CDG 6:30 PM,BOS,29h 0m,FlyScore: 5.2,$430 ,CheapTickets
+Delta,Nonstop,BOS 7:03 PM,CDG,8:15 AM,7h 12m,Nonstop,CDG 10:15 AM,BOS 12:13 PM,7h 58m,FlyScore: 8.6,See Price,
+WOW air,1 stop,BOS 7:00 PM,CDG,5:25 PM,16h 25m,1 stop,CDG 6:30 PM,BOS,29h 0m,FlyScore: 5.0,$430 ,CheapTickets
+Icelandair,1 stop,BOS 9:30 PM,CDG,6:20 AM,26h 50m,1 stop,2:00 PM,BOS 6:35 PM,10h 35m,FlyScore: 7.0,$502 ,CheapTickets
+Icelandair,1 stop,BOS 9:30 PM,CDG,6:20 AM,26h 50m,1 stop,2:00 PM,BOS,28h 0m,FlyScore: 6.2,$502 ,CheapTickets
+,,,,,,,,,,,,
+Icelandair,1 stop,BOS 9:30 PM,CDG,6:20 AM,26h 50m,1 stop,CDG 8:00 AM,BOS 12:00 PM,10h 0m,FlyScore: 6.9,$504 ,CheapTickets
+Icelandair,1 stop,BOS 9:30 PM,CDG,6:20 AM,26h 50m,1 stop,CDG 8:00 AM,BOS 6:35 PM,16h 35m,FlyScore: 6.7,$504 ,Orbitz
+British Airways,1 stop,BOS 9:30 PM,CDG,1:15 PM,9h 45m,1 stop,CDG 1:05 PM,BOS 6:25 PM,11h 20m,FlyScore: 7.4,$506 ,Student Universe
+British Airways,1 stop,BOS 7:20 PM,CDG,11:15 AM,9h 55m,1 stop,CDG 1:05 PM,BOS 6:25 PM,11h 20m,FlyScore: 7.2,$506 ,Student Universe
+British Airways,1 stop,BOS 10:40 PM,CDG,3:45 PM,11h 5m,1 stop,CDG 1:05 PM,BOS 6:25 PM,11h 20m,FlyScore: 7.3,$506 ,Student Universe
+Icelandair,1 stop,BOS 9:30 PM,CDG,12:55 PM,9h 25m,1 stop,2:00 PM,BOS 6:35 PM,10h 35m,FlyScore: 7.7,$542 ,CheapOair
+Icelandair,1 stop,BOS 9:30 PM,CDG,12:55 PM,9h 25m,1 stop,2:00 PM,BOS,28h 0m,FlyScore: 6.9,$542 ,CheapTickets
+Icelandair,1 stop,BOS 9:30 PM,CDG,12:55 PM,9h 25m,1 stop,CDG 8:00 AM,BOS 12:00 PM,10h 0m,FlyScore: 7.6,$544 ,OneTravel
+Icelandair,1 stop,BOS 9:30 PM,CDG,12:55 PM,9h 25m,1 stop,CDG 8:00 AM,BOS 6:35 PM,16h 35m,FlyScore: 7.4,$544 ,CheapTickets
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+United,1 stop,BOS 1:00 PM,CDG,9:30 AM,14h 30m,1 stop,CDG 6:30 AM,BOS 6:35 PM,18h 5m,FlyScore: 7.1,$560 ,United
+United,1 stop,BOS 9:40 AM,CDG,6:55 AM,15h 15m,1 stop,CDG 6:30 AM,BOS 6:35 PM,18h 5m,FlyScore: 7.0,$560 ,United
+,2 stops,,,11:30 AM,16h 30m,2 stops,,,4h 55m,,,
+United,1 stop,BOS 10:20 AM,CDG,9:30 AM,17h 10m,1 stop,CDG 6:30 AM,BOS 6:35 PM,18h 5m,FlyScore: 6.9,$560 ,United
+,,,,,,,,,,,,
+United,1 stop,BOS 6:00 AM,CDG,6:55 AM,18h 55m,1 stop,CDG 6:30 AM,BOS 6:35 PM,18h 5m,FlyScore: 6.9,$560 ,United
+United,1 stop,BOS 8:31 AM,CDG,9:30 AM,18h 59m,1 stop,CDG 6:30 AM,BOS 6:35 PM,18h 5m,FlyScore: 6.9,$560 ,United
+United,1 stop,BOS 7:02 AM,CDG,9:30 AM,20h 28m,1 stop,CDG 6:30 AM,BOS 6:35 PM,18h 5m,FlyScore: 6.9,$560 ,United
+,,,,,,,,,,,,
+United,1 stop,BOS 5:00 AM,CDG,9:30 AM,22h 30m,1 stop,CDG 6:30 AM,BOS 6:35 PM,18h 5m,FlyScore: 6.7,$560 ,United
+Lufthansa,1 stop,BOS 8:20 PM,CDG,1:55 PM,11h 35m,1 stop,CDG 3:05 PM,BOS 7:55 PM,10h 50m,FlyScore: 7.3,$564 ,Vayama
+United,1 stop,BOS 2:16 PM,CDG,6:55 AM,10h 39m,2 stops,CDG 7:00 AM,BOS 3:55 PM,14h 55m,FlyScore: 7.3,$564 ,United
+Lufthansa,1 stop,BOS 8:20 PM,CDG,5:10 PM,14h 50m,1 stop,CDG 3:05 PM,BOS 7:55 PM,10h 50m,FlyScore: 7.1,$564 ,Vayama
+United,1 stop,BOS 2:16 PM,CDG,6:55 AM,10h 39m,2 stops,CDG 7:00 AM,BOS 5:00 PM,16h 0m,FlyScore: 7.2,$564 ,United
+United,1 stop,BOS 3:00 PM,CDG,9:30 AM,12h 30m,2 stops,CDG 7:00 AM,BOS 3:55 PM,14h 55m,FlyScore: 7.2,$564 ,United
+United,1 stop,BOS 2:16 PM,CDG,6:55 AM,10h 39m,2 stops,CDG 7:00 AM,BOS 6:00 PM,17h 0m,FlyScore: 7.2,$564 ,United
+Lufthansa,1 stop,BOS 8:20 PM,CDG,7:25 PM,17h 5m,1 stop,CDG 3:05 PM,BOS 7:55 PM,10h 50m,FlyScore: 7.1,$564 ,Vayama
+United,1 stop,BOS 2:16 PM,CDG,6:55 AM,10h 39m,2 stops,CDG 7:00 AM,BOS 6:39 PM,17h 39m,FlyScore: 6.9,$564 ,United
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+United,1 stop,BOS 3:00 PM,CDG,9:30 AM,12h 30m,2 stops,CDG 7:00 AM,BOS 5:00 PM,16h 0m,FlyScore: 7.1,$564 ,United
+United,1 stop,BOS 2:16 PM,CDG,6:55 AM,10h 39m,2 stops,CDG 7:00 AM,BOS 7:30 PM,18h 30m,FlyScore: 7.1,$564 ,United
+,2 stops,,,11:30 AM,16h 30m,2 stops,,,4h 55m,,,
+United,1 stop,BOS 1:00 PM,CDG,9:30 AM,14h 30m,2 stops,CDG 7:00 AM,BOS 3:55 PM,14h 55m,FlyScore: 7.1,$564 ,United
+,,,,,,,,,,,,
+United,1 stop,BOS 3:00 PM,CDG,9:30 AM,12h 30m,2 stops,CDG 7:00 AM,BOS 6:00 PM,17h 0m,FlyScore: 7.1,$564 ,United
+United,1 stop,BOS 3:00 PM,CDG,9:30 AM,12h 30m,2 stops,CDG 7:00 AM,BOS 6:39 PM,17h 39m,FlyScore: 6.8,$564 ,United
+United,1 stop,BOS 9:40 AM,CDG,6:55 AM,15h 15m,2 stops,CDG 7:00 AM,BOS 3:55 PM,14h 55m,FlyScore: 7.1,$564 ,United
+,,,,,,,,,,,,
+United,1 stop,BOS 1:00 PM,CDG,9:30 AM,14h 30m,2 stops,CDG 7:00 AM,BOS 5:00 PM,16h 0m,FlyScore: 7.1,$564 ,United
+Lufthansa,1 stop,BOS 8:20 PM,CDG,1:55 PM,11h 35m,1 stop,CDG 7:00 AM,BOS 7:55 PM,18h 55m,FlyScore: 7.0,$564 ,Vayama
+United,1 stop,BOS 3:00 PM,CDG,9:30 AM,12h 30m,2 stops,CDG 7:00 AM,BOS 7:30 PM,18h 30m,FlyScore: 7.0,$564 ,United
+United,1 stop,BOS 9:40 AM,CDG,6:55 AM,15h 15m,2 stops,CDG 7:00 AM,BOS 5:00 PM,16h 0m,FlyScore: 7.1,$564 ,United
+United,1 stop,BOS 1:00 PM,CDG,9:30 AM,14h 30m,2 stops,CDG 7:00 AM,BOS 6:00 PM,17h 0m,FlyScore: 7.0,$564 ,United
+United,1 stop,BOS 10:20 AM,CDG,9:30 AM,17h 10m,2 stops,CDG 7:00 AM,BOS 3:55 PM,14h 55m,FlyScore: 7.0,$564 ,United
+United,1 stop,BOS 1:00 PM,CDG,9:30 AM,14h 30m,2 stops,CDG 7:00 AM,BOS 6:39 PM,17h 39m,FlyScore: 6.7,$564 ,United
+United,1 stop,BOS 9:40 AM,CDG,6:55 AM,15h 15m,2 stops,CDG 7:00 AM,BOS 6:00 PM,17h 0m,FlyScore: 7.0,$564 ,United
+United,1 stop,BOS 9:40 AM,CDG,6:55 AM,15h 15m,2 stops,CDG 7:00 AM,BOS 6:39 PM,17h 39m,FlyScore: 6.7,$564 ,United
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+United,1 stop,BOS 1:00 PM,CDG,9:30 AM,14h 30m,2 stops,CDG 7:00 AM,BOS 7:30 PM,18h 30m,FlyScore: 7.0,$564 ,United
+United,1 stop,BOS 10:20 AM,CDG,9:30 AM,17h 10m,2 stops,CDG 7:00 AM,BOS 5:00 PM,16h 0m,FlyScore: 7.0,$564 ,United
+,2 stops,,,11:30 AM,16h 30m,2 stops,,,4h 55m,,,
+United,1 stop,BOS 9:40 AM,CDG,6:55 AM,15h 15m,2 stops,CDG 7:00 AM,BOS 7:30 PM,18h 30m,FlyScore: 7.0,$564 ,United
+,,,,,,,,,,,,
+Lufthansa,1 stop,BOS 8:20 PM,CDG,5:10 PM,14h 50m,1 stop,CDG 7:00 AM,BOS 7:55 PM,18h 55m,FlyScore: 6.8,$564 ,Vayama
+United,1 stop,BOS 6:00 AM,CDG,6:55 AM,18h 55m,2 stops,CDG 7:00 AM,BOS 3:55 PM,14h 55m,FlyScore: 7.0,$564 ,United
+United,1 stop,BOS 8:31 AM,CDG,9:30 AM,18h 59m,2 stops,CDG 7:00 AM,BOS 3:55 PM,14h 55m,FlyScore: 6.9,$564 ,United
+,,,,,,,,,,,,
+United,1 stop,BOS 10:20 AM,CDG,9:30 AM,17h 10m,2 stops,CDG 7:00 AM,BOS 6:00 PM,17h 0m,FlyScore: 6.9,$564 ,United
+United,1 stop,BOS 10:20 AM,CDG,9:30 AM,17h 10m,2 stops,CDG 7:00 AM,BOS 6:39 PM,17h 39m,FlyScore: 6.6,$564 ,United
+United,1 stop,BOS 6:00 AM,CDG,6:55 AM,18h 55m,2 stops,CDG 7:00 AM,BOS 5:00 PM,16h 0m,FlyScore: 6.9,$564 ,United
+United,1 stop,BOS 8:31 AM,CDG,9:30 AM,18h 59m,2 stops,CDG 7:00 AM,BOS 5:00 PM,16h 0m,FlyScore: 6.9,$564 ,United
+United,1 stop,BOS 7:02 AM,CDG,9:30 AM,20h 28m,2 stops,CDG 7:00 AM,BOS 3:55 PM,14h 55m,FlyScore: 6.9,$564 ,United
+United,1 stop,BOS 10:20 AM,CDG,9:30 AM,17h 10m,2 stops,CDG 7:00 AM,BOS 7:30 PM,18h 30m,FlyScore: 6.9,$564 ,United
+United,1 stop,BOS 6:00 AM,CDG,6:55 AM,18h 55m,2 stops,CDG 7:00 AM,BOS 6:00 PM,17h 0m,FlyScore: 6.9,$564 ,United
+United,1 stop,BOS 8:31 AM,CDG,9:30 AM,18h 59m,2 stops,CDG 7:00 AM,BOS 6:00 PM,17h 0m,FlyScore: 6.8,$564 ,United
+Lufthansa,1 stop,BOS 8:20 PM,CDG,7:25 PM,17h 5m,1 stop,CDG 7:00 AM,BOS 7:55 PM,18h 55m,FlyScore: 6.7,$564 ,Vayama
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+United,1 stop,BOS 7:02 AM,CDG,9:30 AM,20h 28m,2 stops,CDG 7:00 AM,BOS 5:00 PM,16h 0m,FlyScore: 6.9,$564 ,United
+United,1 stop,BOS 6:00 AM,CDG,6:55 AM,18h 55m,2 stops,CDG 7:00 AM,BOS 6:39 PM,17h 39m,FlyScore: 6.5,$564 ,United
+,2 stops,,,11:30 AM,16h 30m,2 stops,,,4h 55m,,,
+United,1 stop,BOS 8:31 AM,CDG,9:30 AM,18h 59m,2 stops,CDG 7:00 AM,BOS 6:39 PM,17h 39m,FlyScore: 6.5,$564 ,United
+,,,,,,,,,,,,
+United,1 stop,BOS 5:00 AM,CDG,9:30 AM,22h 30m,2 stops,CDG 7:00 AM,BOS 3:55 PM,14h 55m,FlyScore: 6.8,$564 ,United
+United,1 stop,BOS 6:00 AM,CDG,6:55 AM,18h 55m,2 stops,CDG 7:00 AM,BOS 7:30 PM,18h 30m,FlyScore: 6.8,$564 ,United
+United,1 stop,BOS 7:02 AM,CDG,9:30 AM,20h 28m,2 stops,CDG 7:00 AM,BOS 6:00 PM,17h 0m,FlyScore: 6.9,$564 ,United
+,,,,,,,,,,,,
+United,1 stop,BOS 8:31 AM,CDG,9:30 AM,18h 59m,2 stops,CDG 7:00 AM,BOS 7:30 PM,18h 30m,FlyScore: 6.8,$564 ,United
+United,1 stop,BOS 7:02 AM,CDG,9:30 AM,20h 28m,2 stops,CDG 7:00 AM,BOS 6:39 PM,17h 39m,FlyScore: 6.5,$564 ,United
+United,1 stop,BOS 5:00 AM,CDG,9:30 AM,22h 30m,2 stops,CDG 7:00 AM,BOS 5:00 PM,16h 0m,FlyScore: 6.7,$564 ,United
+United,1 stop,BOS 7:02 AM,CDG,9:30 AM,20h 28m,2 stops,CDG 7:00 AM,BOS 7:30 PM,18h 30m,FlyScore: 6.8,$564 ,United
+United,1 stop,BOS 5:00 AM,CDG,9:30 AM,22h 30m,2 stops,CDG 7:00 AM,BOS 6:00 PM,17h 0m,FlyScore: 6.7,$564 ,United
+United,1 stop,BOS 5:00 AM,CDG,9:30 AM,22h 30m,2 stops,CDG 7:00 AM,BOS 6:39 PM,17h 39m,FlyScore: 6.4,$564 ,United
+United,1 stop,BOS 5:00 AM,CDG,9:30 AM,22h 30m,2 stops,CDG 7:00 AM,BOS 7:30 PM,18h 30m,FlyScore: 6.6,$564 ,United
+United,2 stops,BOS 10:29 AM,CDG,6:55 AM,14h 26m,1 stop,CDG 6:30 AM,BOS 6:35 PM,18h 5m,FlyScore: 6.7,$565 ,United
+United,2 stops,BOS 8:31 AM,CDG,6:55 AM,16h 24m,1 stop,CDG 6:30 AM,BOS 6:35 PM,18h 5m,FlyScore: 6.5,$565 ,United
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+United,1 stop,BOS 2:16 PM,CDG,6:55 AM,10h 39m,1 stop,CDG 9:45 AM,BOS 3:55 PM,12h 10m,FlyScore: 7.5,$567 ,United
+United,1 stop,BOS 2:16 PM,CDG,6:55 AM,10h 39m,1 stop,CDG 12:25 PM,BOS 6:39 PM,12h 14m,FlyScore: 7.4,$567 ,United
+,2 stops,,,11:30 AM,16h 30m,2 stops,,,4h 55m,,,
+United,1 stop,BOS 2:16 PM,CDG,6:55 AM,10h 39m,1 stop,CDG 9:45 AM,BOS 5:00 PM,13h 15m,FlyScore: 7.4,$567 ,United
+,,,,,,,,,,,,
+United,1 stop,BOS 3:00 PM,CDG,9:30 AM,12h 30m,1 stop,CDG 9:45 AM,BOS 3:55 PM,12h 10m,FlyScore: 7.4,$567 ,United
+United,1 stop,BOS 3:00 PM,CDG,9:30 AM,12h 30m,1 stop,CDG 12:25 PM,BOS 6:39 PM,12h 14m,FlyScore: 7.4,$567 ,United
+United,1 stop,BOS 2:16 PM,CDG,6:55 AM,10h 39m,1 stop,CDG 9:45 AM,BOS 6:00 PM,14h 15m,FlyScore: 7.4,$567 ,United
+,,,,,,,,,,,,
+United,1 stop,BOS 3:00 PM,CDG,9:30 AM,12h 30m,1 stop,CDG 9:45 AM,BOS 5:00 PM,13h 15m,FlyScore: 7.4,$567 ,United
+United,1 stop,BOS 2:16 PM,CDG,6:55 AM,10h 39m,1 stop,CDG 9:45 AM,BOS 7:30 PM,15h 45m,FlyScore: 7.3,$567 ,United
+United,1 stop,BOS 1:00 PM,CDG,9:30 AM,14h 30m,1 stop,CDG 9:45 AM,BOS 3:55 PM,12h 10m,FlyScore: 7.3,$567 ,United
+United,1 stop,BOS 1:00 PM,CDG,9:30 AM,14h 30m,1 stop,CDG 12:25 PM,BOS 6:39 PM,12h 14m,FlyScore: 7.3,$567 ,United
+United,1 stop,BOS 3:00 PM,CDG,9:30 AM,12h 30m,1 stop,CDG 9:45 AM,BOS 6:00 PM,14h 15m,FlyScore: 7.3,$567 ,United
+United,1 stop,BOS 9:40 AM,CDG,6:55 AM,15h 15m,1 stop,CDG 9:45 AM,BOS 3:55 PM,12h 10m,FlyScore: 7.3,$567 ,United
+United,1 stop,BOS 9:40 AM,CDG,6:55 AM,15h 15m,1 stop,CDG 12:25 PM,BOS 6:39 PM,12h 14m,FlyScore: 7.3,$567 ,United
+United,1 stop,BOS 2:16 PM,CDG,6:55 AM,10h 39m,1 stop,CDG 12:25 PM,BOS 11:30 PM,17h 5m,FlyScore: 7.2,$567 ,United
+United,1 stop,BOS 1:00 PM,CDG,9:30 AM,14h 30m,1 stop,CDG 9:45 AM,BOS 5:00 PM,13h 15m,FlyScore: 7.3,$567 ,United
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+United,1 stop,BOS 3:00 PM,CDG,9:30 AM,12h 30m,1 stop,CDG 9:45 AM,BOS 7:30 PM,15h 45m,FlyScore: 7.3,$567 ,United
+United,1 stop,BOS 2:16 PM,CDG,6:55 AM,10h 39m,1 stop,CDG 9:45 AM,BOS 9:22 PM,17h 37m,FlyScore: 7.2,$567 ,United
+,2 stops,,,11:30 AM,16h 30m,2 stops,,,4h 55m,,,
+United,1 stop,BOS 9:40 AM,CDG,6:55 AM,15h 15m,1 stop,CDG 9:45 AM,BOS 5:00 PM,13h 15m,FlyScore: 7.3,$567 ,United
+,,,,,,,,,,,,
+United,1 stop,BOS 1:00 PM,CDG,9:30 AM,14h 30m,1 stop,CDG 9:45 AM,BOS 6:00 PM,14h 15m,FlyScore: 7.2,$567 ,United
+United,1 stop,BOS 10:20 AM,CDG,9:30 AM,17h 10m,1 stop,CDG 9:45 AM,BOS 3:55 PM,12h 10m,FlyScore: 7.2,$567 ,United
+United,1 stop,BOS 10:20 AM,CDG,9:30 AM,17h 10m,1 stop,CDG 12:25 PM,BOS 6:39 PM,12h 14m,FlyScore: 7.2,$567 ,United
+,,,,,,,,,,,,
+United,1 stop,BOS 9:40 AM,CDG,6:55 AM,15h 15m,1 stop,CDG 9:45 AM,BOS 6:00 PM,14h 15m,FlyScore: 7.2,$567 ,United
+United,1 stop,BOS 3:00 PM,CDG,9:30 AM,12h 30m,1 stop,CDG 12:25 PM,BOS 11:30 PM,17h 5m,FlyScore: 7.2,$567 ,United
+United,1 stop,BOS 2:16 PM,CDG,6:55 AM,10h 39m,1 stop,CDG 9:45 AM,BOS 10:59 PM,19h 14m,FlyScore: 7.2,$567 ,United
+United,1 stop,BOS 3:00 PM,CDG,9:30 AM,12h 30m,1 stop,CDG 9:45 AM,BOS 9:22 PM,17h 37m,FlyScore: 7.2,$567 ,United
+United,1 stop,BOS 1:00 PM,CDG,9:30 AM,14h 30m,1 stop,CDG 9:45 AM,BOS 7:30 PM,15h 45m,FlyScore: 7.2,$567 ,United
+United,1 stop,BOS 10:20 AM,CDG,9:30 AM,17h 10m,1 stop,CDG 9:45 AM,BOS 5:00 PM,13h 15m,FlyScore: 7.2,$567 ,United
+United,1 stop,BOS 9:40 AM,CDG,6:55 AM,15h 15m,1 stop,CDG 9:45 AM,BOS 7:30 PM,15h 45m,FlyScore: 7.2,$567 ,United
+United,1 stop,BOS 6:00 AM,CDG,6:55 AM,18h 55m,1 stop,CDG 9:45 AM,BOS 3:55 PM,12h 10m,FlyScore: 7.2,$567 ,United
+United,1 stop,BOS 6:00 AM,CDG,6:55 AM,18h 55m,1 stop,CDG 12:25 PM,BOS 6:39 PM,12h 14m,FlyScore: 7.1,$567 ,United
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+United,1 stop,BOS 8:31 AM,CDG,9:30 AM,18h 59m,1 stop,CDG 9:45 AM,BOS 3:55 PM,12h 10m,FlyScore: 7.1,$567 ,United
+United,1 stop,BOS 8:31 AM,CDG,9:30 AM,18h 59m,1 stop,CDG 12:25 PM,BOS 6:39 PM,12h 14m,FlyScore: 7.1,$567 ,United
+,2 stops,,,11:30 AM,16h 30m,2 stops,,,4h 55m,,,
+United,1 stop,BOS 10:20 AM,CDG,9:30 AM,17h 10m,1 stop,CDG 9:45 AM,BOS 6:00 PM,14h 15m,FlyScore: 7.1,$567 ,United
+,,,,,,,,,,,,
+United,1 stop,BOS 1:00 PM,CDG,9:30 AM,14h 30m,1 stop,CDG 12:25 PM,BOS 11:30 PM,17h 5m,FlyScore: 7.1,$567 ,United
+United,1 stop,BOS 3:00 PM,CDG,9:30 AM,12h 30m,1 stop,CDG 9:45 AM,BOS 10:59 PM,19h 14m,FlyScore: 7.1,$567 ,United
+United,1 stop,BOS 1:00 PM,CDG,9:30 AM,14h 30m,1 stop,CDG 9:45 AM,BOS 9:22 PM,17h 37m,FlyScore: 7.1,$567 ,United
+,,,,,,,,,,,,
+United,1 stop,BOS 6:00 AM,CDG,6:55 AM,18h 55m,1 stop,CDG 9:45 AM,BOS 5:00 PM,13h 15m,FlyScore: 7.1,$567 ,United
+United,1 stop,BOS 8:31 AM,CDG,9:30 AM,18h 59m,1 stop,CDG 9:45 AM,BOS 5:00 PM,13h 15m,FlyScore: 7.1,$567 ,United
+United,1 stop,BOS 9:40 AM,CDG,6:55 AM,15h 15m,1 stop,CDG 12:25 PM,BOS 11:30 PM,17h 5m,FlyScore: 7.1,$567 ,United
+United,1 stop,BOS 7:02 AM,CDG,9:30 AM,20h 28m,1 stop,CDG 9:45 AM,BOS 3:55 PM,12h 10m,FlyScore: 7.2,$567 ,United
+United,1 stop,BOS 7:02 AM,CDG,9:30 AM,20h 28m,1 stop,CDG 12:25 PM,BOS 6:39 PM,12h 14m,FlyScore: 7.1,$567 ,United
+United,1 stop,BOS 9:40 AM,CDG,6:55 AM,15h 15m,1 stop,CDG 9:45 AM,BOS 9:22 PM,17h 37m,FlyScore: 7.0,$567 ,United
+United,1 stop,BOS 10:20 AM,CDG,9:30 AM,17h 10m,1 stop,CDG 9:45 AM,BOS 7:30 PM,15h 45m,FlyScore: 7.1,$567 ,United
+United,1 stop,BOS 6:00 AM,CDG,6:55 AM,18h 55m,1 stop,CDG 9:45 AM,BOS 6:00 PM,14h 15m,FlyScore: 7.1,$567 ,United
+United,1 stop,BOS 8:31 AM,CDG,9:30 AM,18h 59m,1 stop,CDG 9:45 AM,BOS 6:00 PM,14h 15m,FlyScore: 7.1,$567 ,United
